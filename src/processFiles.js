@@ -127,12 +127,16 @@ const processFiles = (container, { files, use2D }) => {
             }).map(({ data }) => data)
         const any3D  = ! dataSets.map(({ is3D }) => is3D).every((is3D) => !is3D)
         const is3D = any3D && !use2D;
+        const style = {
+          backgroundColor: [255, 255, 255],
+        };
         resolve(
           createViewer(container, {
             image,
             geometries,
             pointSets,
             use2D: !is3D,
+            viewerStyle: style,
           })
         );
       })

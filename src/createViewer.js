@@ -76,7 +76,7 @@ const createViewer = (
   view.setContainer(container);
   view.setBackground(config.backgroundColor);
 
-  UserInterface.addLogo(container);
+  //UserInterface.addLogo(container);
 
   const imageSource = proxyManager.createProxy('Sources', 'TrivialProducer', {
     name: 'Image',
@@ -98,7 +98,7 @@ const createViewer = (
     if (dataArray.getNumberOfComponents() > 1) {
       lookupTableProxy.setPresetName('Grayscale');
     } else {
-      lookupTableProxy.setPresetName('Viridis (matplotlib)');
+      lookupTableProxy.setPresetName('2hot');
     }
     piecewiseFunction = proxyManager.getPiecewiseFunction(dataArray.getName());
 

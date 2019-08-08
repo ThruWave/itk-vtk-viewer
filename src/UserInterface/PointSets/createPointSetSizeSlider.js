@@ -18,7 +18,7 @@ function createPointSetSizeSlider(
     isBackgroundDark
   );
   const pointSetSizes = new Array(pointSetHasScalars.length);
-  const defaultPointSetSize = 3;
+  const defaultPointSetSize = 2;
   pointSetSizes.fill(defaultPointSetSize);
   const sliderEntry = document.createElement('div');
   sliderEntry.setAttribute('class', style.sliderEntry);

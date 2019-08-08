@@ -11,7 +11,7 @@ function createGeometryColorPresetSelector(
   geometryColorPresetRow
 ) {
   const geometryColorPresets = new Array(geometryHasScalars.length);
-  const defaultGeometryColorPreset = 'Viridis (matplotlib)';
+  const defaultGeometryColorPreset = '2hot';
   geometryColorPresets.fill(defaultGeometryColorPreset);
 
   const presetSelector = document.createElement('select');

@@ -18,7 +18,7 @@ function createPointSetOpacitySlider(
     isBackgroundDark
   );
   const pointSetOpacities = new Array(pointSetHasScalars.length);
-  const defaultPointSetOpacity = 1.0;
+  const defaultPointSetOpacity = 0.25;
   pointSetOpacities.fill(defaultPointSetOpacity);
   const sliderEntry = document.createElement('div');
   sliderEntry.setAttribute('class', style.sliderEntry);

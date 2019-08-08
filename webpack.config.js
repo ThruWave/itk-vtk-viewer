@@ -85,4 +85,5 @@ module.exports = {
       maxEntrypointSize: 15000000
   },
   devServer,
+  devtool: "source-map",
 };
