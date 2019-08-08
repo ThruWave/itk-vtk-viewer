@@ -387,6 +387,16 @@ input:checked.toggleInput + label {
   z-index: 1000;
 }
 
+.selectorLabel {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: mediumblue;
+  border: none;
+  font-size: 1.2em;
+  z-index: 1000;
+}
+
 select {
   -moz-appearance: none;
 }
@@ -398,6 +408,18 @@ select option {
 select:focus {
   outline: none;
   border: none;
+}
+
+.colorMapButton {
+  width: 8mm;
+  padding: 4px;
+  padding-left: 6px;
+  z-index: 1000;
+}
+
+.colorMapButton svg {
+  width: 1.2em;
+  height: 1.2em;
 }
 
 .sampleDistanceButton {

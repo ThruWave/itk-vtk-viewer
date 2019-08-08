@@ -23,7 +23,7 @@ function createPointSetSizeSlider(
   const sliderEntry = document.createElement('div');
   sliderEntry.setAttribute('class', style.sliderEntry);
   sliderEntry.innerHTML = `
-    <div itk-vtk-tooltip itk-vtk-tooltip-bottom itk-vtk-tooltip-content="Size" class="${
+    <div itk-vtk-tooltip itk-vtk-tooltip-bottom itk-vtk-tooltip-content="Point Size" class="${
       contrastSensitiveStyle.invertibleButton
     } ${style.gradientOpacitySlider}">
       ${pointSetSizeIcon}

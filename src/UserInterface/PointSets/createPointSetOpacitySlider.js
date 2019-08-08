@@ -23,12 +23,12 @@ function createPointSetOpacitySlider(
   const sliderEntry = document.createElement('div');
   sliderEntry.setAttribute('class', style.sliderEntry);
   sliderEntry.innerHTML = `
-    <div itk-vtk-tooltip itk-vtk-tooltip-bottom itk-vtk-tooltip-content="Opacity" class="${
+    <div itk-vtk-tooltip itk-vtk-tooltip-bottom itk-vtk-tooltip-content="Point Opacity" class="${
       contrastSensitiveStyle.invertibleButton
     } ${style.gradientOpacitySlider}">
       ${opacityIcon}
     </div>
-    <input type="range" min="0" max="1" value="${defaultPointSetOpacity}" step="0.05"
+    <input type="range" min="0" max="1" value="${defaultPointSetOpacity}" step="0.01"
       id="${viewerDOMId}-pointSetOpacitySlider"
       class="${style.slider}" />`;
   const opacityElement = sliderEntry.querySelector(
