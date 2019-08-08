@@ -12,14 +12,8 @@ function createPointSetColorPresetSelector(
   pointSetColorPresetRow
 ) {
   const pointSetColorPresets = new Array(pointSetHasScalars.length);
-  const defaultPointSetColorPreset = '2hot';
+  const defaultPointSetColorPreset = 'Rainbow Blended White';
   pointSetColorPresets.fill(defaultPointSetColorPreset);
-
-  const presetLabel = document.createElement('label');
-  presetLabel.setAttribute('class', style.selector);
-  presetLabel.setAttribute('for', `${viewerDOMId}-pointSetColorMapSelector`);
-  presetLabel.id = `${viewerDOMId}-pointSetColorMapLabel`;
-  presetLabel.innerText = "Color Map: ";
 
   const presetOptions = ColorPresetNames
     .map((name) => `<option value="${name}">${name}</option>`)
@@ -28,7 +22,7 @@ function createPointSetColorPresetSelector(
   const presetSelector = document.createElement('select');
   presetSelector.setAttribute('class', style.selector);
   presetSelector.id = `${viewerDOMId}-pointSetColorMapSelector`;
-  presetSelector.innerHTML = `${presetOptions}`;
+  presetSelector.innerHTML = presetOptions;
 
   pointSetSelector.addEventListener('change',
     (event) => {

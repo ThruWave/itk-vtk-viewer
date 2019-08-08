@@ -18,7 +18,7 @@ function createPointSetOpacitySlider(
     isBackgroundDark
   );
   const pointSetOpacities = new Array(pointSetHasScalars.length);
-  const defaultPointSetOpacity = 0.25;
+  const defaultPointSetOpacity = 0.2;
   pointSetOpacities.fill(defaultPointSetOpacity);
   const sliderEntry = document.createElement('div');
   sliderEntry.setAttribute('class', style.sliderEntry);
@@ -28,7 +28,7 @@ function createPointSetOpacitySlider(
     } ${style.gradientOpacitySlider}">
       ${opacityIcon}
     </div>
-    <input type="range" min="0" max="1" value="${defaultPointSetOpacity}" step="0.01"
+    <input type="range" min="0" max="1" value="${defaultPointSetOpacity}" step="0.05"
       id="${viewerDOMId}-pointSetOpacitySlider"
       class="${style.slider}" />`;
   const opacityElement = sliderEntry.querySelector(

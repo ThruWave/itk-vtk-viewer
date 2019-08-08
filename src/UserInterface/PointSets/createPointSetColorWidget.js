@@ -62,6 +62,14 @@ function createPointSetColorWidget(
   const pointSetColorPresetRow = document.createElement('div')
   pointSetColorPresetRow.setAttribute('class', style.uiRow)
   pointSetColorPresetRow.className += ` ${viewerDOMId}-toggle`;
+
+  const presetLabel = document.createElement('Label');
+  presetLabel.setAttribute('class', style.selector);
+  presetLabel.setAttribute('for', `${viewerDOMId}-pointSetColorMapSelector`);
+  presetLabel.id = `${viewerDOMId}-pointSetColorMapLabel`;
+  presetLabel.innerHTML = "Color Map: ";
+  pointSetColorPresetRow.appendChild(presetLabel);
+
   createPointSetColorPresetSelector(
     pointSetHasScalars,
     viewerDOMId,
@@ -70,6 +78,7 @@ function createPointSetColorWidget(
     pointSetSelector,
     pointSetColorPresetRow
   )
+
   pointSetsUIGroup.appendChild(pointSetColorPresetRow)
 
   const pointSetSizeRow = document.createElement('div')
