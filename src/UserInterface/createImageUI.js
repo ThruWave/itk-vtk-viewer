@@ -32,6 +32,7 @@ function createImageUI(
       presetRow,
       viewerDOMId,
       lookupTableProxy,
+      isBackgroundDark,
       renderWindow
     );
     presetRow.className += ` ${viewerDOMId}-toggle`;

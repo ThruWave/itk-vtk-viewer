@@ -1,20 +1,36 @@
 import style from '../ItkVtkViewer.module.css';
 
 import ColorPresetNames from '../ColorPresetNames';
+import ColorMapIcon from "../icons/color-map.svg";
+import getContrastSensitiveStyle from "../getContrastSensitiveStyle";
 
 function createColorPresetSelector(
   uiContainer,
   viewerDOMId,
   lookupTableProxy,
+  isBackgroundDark,
   renderWindow
 ) {
+  const contrastSensitiveStyle = getContrastSensitiveStyle(
+    ['invertibleButton'],
+    isBackgroundDark
+  );
+
+  const presetEntry = document.createElement('div');
+  presetEntry.setAttribute('class', style.sliderEntry);
+  presetEntry.innerHTML = `
+    <div itk-vtk-tooltip itk-vtk-tooltip-bottom itk-vtk-tooltip-content="ColorMap" class="${
+    contrastSensitiveStyle.invertibleButton
+  } ${style.colorMapButton}">
+      ${ColorMapIcon}
+    </div>`;
 
   const presetLabel = document.createElement('label');
-  presetLabel.setAttribute('class', style.selector);
+  presetLabel.setAttribute('class', style.selectorLabel);
   presetLabel.setAttribute('for', `${viewerDOMId}-colorMapSelector`);
   presetLabel.id = `${viewerDOMId}-colorMapLabel`;
   presetLabel.innerText = "Color Map: ";
-  uiContainer.appendChild(presetLabel);
+  presetEntry.appendChild(presetLabel);
 
   const presetSelector = document.createElement('select');
   presetSelector.setAttribute('class', style.selector);
@@ -28,7 +44,8 @@ function createColorPresetSelector(
     renderWindow.render();
   }
   presetSelector.addEventListener('change', updateColorMap);
-  uiContainer.appendChild(presetSelector);
+  presetEntry.appendChild(presetSelector);
+  uiContainer.appendChild(presetEntry);
   presetSelector.value = lookupTableProxy.getPresetName();
 
   return updateColorMap;
