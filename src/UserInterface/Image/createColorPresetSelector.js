@@ -8,6 +8,14 @@ function createColorPresetSelector(
   lookupTableProxy,
   renderWindow
 ) {
+
+  const presetLabel = document.createElement('label');
+  presetLabel.setAttribute('class', style.selector);
+  presetLabel.setAttribute('for', `${viewerDOMId}-colorMapSelector`);
+  presetLabel.id = `${viewerDOMId}-colorMapLabel`;
+  presetLabel.innerText = "Color Map: ";
+  uiContainer.appendChild(presetLabel);
+
   const presetSelector = document.createElement('select');
   presetSelector.setAttribute('class', style.selector);
   presetSelector.id = `${viewerDOMId}-colorMapSelector`;
