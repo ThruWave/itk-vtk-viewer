@@ -98,7 +98,7 @@ const createViewer = (
     if (dataArray.getNumberOfComponents() > 1) {
       lookupTableProxy.setPresetName('Grayscale');
     } else {
-      lookupTableProxy.setPresetName('2hot');
+      lookupTableProxy.setPresetName('Rainbow Blended White');
     }
     piecewiseFunction = proxyManager.getPiecewiseFunction(dataArray.getName());
 

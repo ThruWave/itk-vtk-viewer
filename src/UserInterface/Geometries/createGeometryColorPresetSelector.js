@@ -11,7 +11,7 @@ function createGeometryColorPresetSelector(
   geometryColorPresetRow
 ) {
   const geometryColorPresets = new Array(geometryHasScalars.length);
-  const defaultGeometryColorPreset = '2hot';
+  const defaultGeometryColorPreset = 'Rainbow Blended White';
   geometryColorPresets.fill(defaultGeometryColorPreset);
 
   const presetSelector = document.createElement('select');
