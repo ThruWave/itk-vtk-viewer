@@ -299,6 +299,38 @@
   width: 1.2em;
 }
 
+.distanceButton {
+  flex: 1;
+  height: 8mm;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.distanceButton svg {
+  height: 1.2em;
+  width: 1.2em;
+}
+
+.resetDistanceButton {
+  flex: 1;
+  width: 8mm;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.resetDistanceButton svg {
+  height: 1.2em;
+  width: 1.2em;
+}
+
 .resetCameraButton {
   flex: 1;
   width: 8mm;

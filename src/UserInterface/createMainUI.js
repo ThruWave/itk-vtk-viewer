@@ -9,6 +9,7 @@ import createRotateButton from './Main/createRotateButton';
 import createAnnotationButton from './Main/createAnnotationButton';
 import createInterpolationButton from './Main/createInterpolationButton';
 import createViewModeButtons from './Main/createViewModeButtons';
+import createDistanceButton from './Main/createDistanceButton';
 import createCroppingButtons from './Main/createCroppingButtons';
 import createResetCameraButton from './Main/createResetCameraButton';
 
@@ -88,6 +89,16 @@ function createMainUI(
     imageRepresentationProxy,
     uiContainer,
     use2D,
+    mainUIRow
+  )
+
+  const { distanceWidget,
+    addDistanceChangedHandler,
+    addResetDistanceHandler } = createDistanceButton(
+    viewerDOMId,
+    contrastSensitiveStyle,
+    view,
+    imageRepresentationProxy,
     mainUIRow
   )
 
