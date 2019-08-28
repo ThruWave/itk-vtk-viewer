@@ -11,8 +11,12 @@ import ItkVtkView from './ItkVtkViewProxy';
 const commonInteractor = [
   { type: 'pan', options: { button: 3 } }, // Pan on Right button drag
   { type: 'pan', options: { button: 1, shift: true } }, // Pan on Shift + Left button drag
-  { type: 'zoom', options: { button: 1, control: true } }, // Zoom on Ctrl + Left button drag
+  { type: 'zoom', options: { button: 2 } }, // Zoom on Middle button drag
+  { type: 'zoom', options: { button: 3, shift: true } }, // Zoom on Shift + Right button drag
+  { type: 'zoom', options: { button: 1, control: true, shift: true } }, // Zoom on Ctrl + Shift + Left button drag
   { type: 'zoom', options: { dragEnabled: false, scrollEnabled: true } }, // Zoom on scroll
+  { type: 'roll', options: { button: 3, control: true } }, // Roll on Ctrl + Right button drag
+  { type: 'roll', options: { button: 1, control: true } }, // Roll on Ctrl + Left button drag
 ];
 
 const interactorStyle3D = commonInteractor.concat([
