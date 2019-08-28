@@ -11,3 +11,4 @@ test/output.html
 test/TESTS-*.xml
 .idea
 data/
+*.map
