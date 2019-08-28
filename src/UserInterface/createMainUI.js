@@ -20,7 +20,7 @@ function createMainUI(
   use2D,
   imageSource,
   imageRepresentationProxy,
-  view
+  view,
 ) {
   const uiContainer = document.createElement('div');
   rootContainer.appendChild(uiContainer);
@@ -28,7 +28,7 @@ function createMainUI(
 
   const contrastSensitiveStyle = getContrastSensitiveStyle(
     ['invertibleButton', 'tooltipButton'],
-    isBackgroundDark
+    isBackgroundDark,
   );
 
   const mainUIGroup = document.createElement('div');
@@ -42,35 +42,35 @@ function createMainUI(
   createToggleUserInterface(
     viewerDOMId,
     contrastSensitiveStyle,
-    uiContainer
+    uiContainer,
   )
 
   createScreenshotButton(
     viewerDOMId,
     contrastSensitiveStyle,
     view,
-    mainUIRow
+    mainUIRow,
   )
 
   createFullscreenButton(
     viewerDOMId,
     contrastSensitiveStyle,
     rootContainer,
-    mainUIRow
+    mainUIRow,
   )
 
   createRotateButton(
     viewerDOMId,
     contrastSensitiveStyle,
     view,
-    mainUIRow
+    mainUIRow,
   )
 
   createAnnotationButton(
     viewerDOMId,
     contrastSensitiveStyle,
     view,
-    mainUIRow
+    mainUIRow,
   )
 
   if (imageRepresentationProxy) {
@@ -78,8 +78,8 @@ function createMainUI(
       viewerDOMId,
       contrastSensitiveStyle,
       view,
-      mainUIRow
-    )
+      mainUIRow,
+    );
   }
 
   createViewModeButtons(
@@ -89,38 +89,43 @@ function createMainUI(
     imageRepresentationProxy,
     uiContainer,
     use2D,
-    mainUIRow
+    mainUIRow,
   )
 
-  const { distanceWidget,
+  const {
+    distanceWidget,
     addDistanceChangedHandler,
-    addResetDistanceHandler } = createDistanceButton(
+  } = createDistanceButton(
     viewerDOMId,
     contrastSensitiveStyle,
     view,
     imageRepresentationProxy,
-    mainUIRow
+    mainUIRow,
   )
 
-  const { croppingWidget,
+  const {
+    croppingWidget,
     addCroppingPlanesChangedHandler,
-    addResetCropHandler } = createCroppingButtons(
+    addResetCropHandler,
+  } = createCroppingButtons(
     viewerDOMId,
     contrastSensitiveStyle,
     view,
     imageRepresentationProxy,
-    mainUIRow
+    mainUIRow,
   )
 
   createResetCameraButton(
     viewerDOMId,
     contrastSensitiveStyle,
     view,
-    mainUIRow
+    mainUIRow,
   )
   uiContainer.appendChild(mainUIGroup);
 
-  return { uiContainer, croppingWidget, addCroppingPlanesChangedHandler, addResetCropHandler };
+  return {
+    uiContainer, croppingWidget, addCroppingPlanesChangedHandler, addResetCropHandler, distanceWidget, addDistanceChangedHandler,
+  };
 }
 
 export default createMainUI;
