@@ -22,7 +22,7 @@
     "mousetrap": "^1.6.3",
     "open": "^6.3.0",
     "promise-file-reader": "^1.0.2",
-    "vtk.js": "^11.0.0"
+    "vtk.js": "^11.0.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.2.0",
@@ -39,7 +39,7 @@
     "karma-tap-pretty-reporter": "^4.0.0",
     "karma-webpack": "2.0.13",
     "kw-doc": "^1.3.0",
-    "kw-web-suite": "^8.0.0",
+    "kw-web-suite": "git+https://github.com/ThruWave/kw-web-suite.git",
     "prettier": "^1.10.2",
     "resemblejs": "^3.1.0",
     "tap-markdown": "^1.2.1",
