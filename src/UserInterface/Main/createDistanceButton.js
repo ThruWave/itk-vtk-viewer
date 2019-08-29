@@ -2,14 +2,14 @@ import vtkDistanceWidget from 'vtk.js/Sources/Interaction/Widgets/DistanceWidget
 
 import style from '../ItkVtkViewer.module.css';
 
-import distanceIcon from '../icons/sample-distance.svg';
+import distanceIcon from '../icons/distance.svg';
 
 function createDistanceButton(
   viewerDOMId,
   contrastSensitiveStyle,
   view,
   imageRepresentationProxy,
-  mainUIRow
+  mainUIRow,
 ) {
   let distanceWidget = null;
   let addDistanceChangedHandler = () => {};
@@ -17,7 +17,6 @@ function createDistanceButton(
     distanceWidget = vtkDistanceWidget.newInstance();
     distanceWidget.setInteractor(view.getInteractor());
     distanceWidget.setEnabled(false);
-    // distanceWidget.setVolumeMapper(imageRepresentationProxy.getMapper());
 
     const distanceChangedHandlers = [];
     addDistanceChangedHandler = (handler) => {
