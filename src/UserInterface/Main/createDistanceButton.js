@@ -2,7 +2,7 @@ import vtkDistanceWidget from 'vtk.js/Sources/Interaction/Widgets/DistanceWidget
 
 import style from '../ItkVtkViewer.module.css';
 
-import distanceIcon from '../icons/distance.svg';
+import distanceIcon from '../icons/ruler.svg';
 
 function createDistanceButton(
   viewerDOMId,
